@@ -207,12 +207,12 @@ header {
 
 }
 
-.header__right {
+.header__right p {
     margin-top: 2rem;
     width: 85%;
 }
 
-.header__btn_md {
+.header__btn-md {
     display: none;
 }
 
@@ -232,3 +232,20 @@ header {
     transform-origin: bottom left;
     transition: var(--transition);
 }
+
+.header__frame:nth-child(2) {
+    transform: rotate(20deg);
+    top: -2rem;
+    left: 2rem;
+}
+
+.header__frames:hover .header__frame {
+    transform: rotate(0);
+
+}
+.header__frames:hover .header__frame:nth-child(2) {
+    top: 0;
+    left: 15rem;
+    
+}
+
