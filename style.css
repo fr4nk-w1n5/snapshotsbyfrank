@@ -128,7 +128,7 @@ nav {
 /* ================ Header ============ */
 
 header {
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     position: relative;
     top: 0;
@@ -286,13 +286,13 @@ header {
     font-size: 1rem;
     font-weight: 600;
     width: 10rem;
-    height: 10rem;
-    display: flex;
-    justify-content: right;
-    animation: spinText 30s linear infinite;
+    height: 10rem; 
+    display: flex; 
+    justify-content: center; 
+    animation: spinText 30s linear infinite; 
 }
 
-.contact__btn p span {
+.contact__btn p span{
     position: absolute;
     transform-origin: 0.3rem 5rem;
 }
@@ -304,3 +304,15 @@ header {
     }
 } 
 
+/* ================ About ============ */
+
+#about {
+    margin-top: 18rem;
+}
+
+.about__container {
+    display: grid;
+    grid-template-columns: 10rem 26rem auto;
+    gap: 3rem;
+    position: relative;
+}
