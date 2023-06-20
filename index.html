@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SwiperJS CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
     <nav>
@@ -104,6 +106,47 @@
     </section>
     <!-- ================ END OF ABOUT =================== -->
 
+    <section id="gallery">
+        <div class="container gallery__container swiper mySwiper">
+            <div class="gallery__head">
+                <h2 class="gallery__title">My Gallery</h2>
+                <div class="empty gallery__empty"></div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Odio maiores iusto quis praesentium! Dolorem veritatis quaerat 
+                dolor impedit error, facilis est. Commodi et libero qui 
+                nostrum doloribus maiores! Suscipit, quidem.
+            </p>
+            <div class="swiper-wrapper">
+                <article class="swiper-slide">
+                    <img src="./images/gallery1.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery2.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery3.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery4.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery5.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery6.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery7.jpg">
+                </article>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- ================ END OF GALLERY =================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

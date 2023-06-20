@@ -18,3 +18,24 @@ textButtons.forEach(textButton => {
     (character, index) => `<span style="transform: 
     rotate(${index*12}deg)">${character}</span>`).join('')
 })
+
+// SwiperJS Gallery Section
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        599: {
+            slidesPerView2,
+            spaceBetween: 40
+        },
+        1023: {
+            slidesPerView3,
+            spaceBetween: 60
+        }
+    }
+
+  });
