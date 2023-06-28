@@ -9,7 +9,7 @@
     --color-white: hsl(0, 0%, 90%);
 
     --container-width-lg: 88%;
-    --container-width-md: 92;
+    --container-width-md: 92%;
 
     --transition: all 400ms ease;
 
@@ -384,7 +384,7 @@ header {
 }
 
 .about__right p {
-    margin: 0 4rem 1.5rem;
+    margin: 0 4rem 1.5rem 0;
 }
 
 /* ================ Gallery ============ */
@@ -512,14 +512,26 @@ footer {
         right: 0;
         flex-direction: column;
         gap: 0;
+        display: none;
+        perspective: 400px;
     }
 
 
     .nav__links li {
         height: 5rem;
         box-shadow: -3rem 3rem 3rem rgba(0, 0, 0, 0.7);
-        
+        animation: navAnimation 600ms ease forwards;
+        transform: rotateX(90deg);
+        opacity: 0;
+        transform-origin: top;
     
+    }
+
+    @keyframes navAnimation {
+        to {
+            transform: rotateX(0);
+            opacity: 1;
+        }
     }
 
     .nav__links li a {
@@ -551,6 +563,8 @@ footer {
     header {
         height: fit-content;
         padding: 14rem 0 12rem;
+        display: grid;
+        place-items: center;
     }
     
     .header__image-bg, .header__image-sm {
@@ -566,6 +580,8 @@ footer {
     .header__image-lg {
         filter: saturate(1) brightness(1);
         border: 1rem solid var(--color-bg-2);
+        border-radius: 15rem 15rem 0 0;
+        overflow: hidden;
         width: 100%;
         top: 0;
         left: 0;
@@ -583,7 +599,6 @@ footer {
     .header__right p {
         width: 100%;
         margin-top: 1.5rem;
-        display: flex;
     }
 
     .header__frames, .contact__btn {
@@ -635,5 +650,25 @@ footer {
     .about__right p {
         margin-bottom: 1rem;
     }
+
+
+    /* =========== gallery ===============*/
+
+    #gallery{
+        margin-top: 8rem;
+
+    }
+
+    .gallery__container p {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .swiper__wrapper {
+        margin-top: 4rem;
+        height: fit-content;
+    }
 }
+
+
 
