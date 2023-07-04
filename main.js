@@ -21,7 +21,7 @@ textButtons.forEach(textButton => {
 
 // SwiperJS Gallery Section
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
@@ -58,8 +58,10 @@ var swiper = new Swiper(".mySwiper", {
     closeNavBtn.style.display = 'none';
   }
 
-closeNavBtn.addEventListener('click', closeNav);
+  closeNavBtn.addEventListener('click', closeNav);
 
-  nav.querySelectorAll('li a').forEach(navLink => {
-      navLink.addEventListener('click', closeNav);
-  })
+  if(document.body.clientWidth < 1024) {
+    nav.querySelectorAll('li a').forEach(navLink => {
+        navLink.addEventListener('click', closeNav);
+    })
+  }
